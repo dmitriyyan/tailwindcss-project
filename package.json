@@ -1,0 +1,27 @@
+{
+  "name": "tailwindcss-project",
+  "version": "1.0.0",
+  "description": "TailwindCSS learning project",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/main.css -o ./dist/index.css",
+    "watch": "npx tailwindcss -i ./src/main.css -o ./dist/index.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriyyan/tailwindcss-project.git"
+  },
+  "keywords": [
+    "tailwindcss"
+  ],
+  "author": "dmitriyyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriyyan/tailwindcss-project/issues"
+  },
+  "homepage": "https://github.com/dmitriyyan/tailwindcss-project#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
