@@ -10,9 +10,9 @@
   <body>
     <div class="mx-auto max-w-screen-xl">
       <!-- header -->
-      <header class="flex items-center justify-between border-b px-2">
+      <header class="flex h-14 items-center justify-between border-b px-2">
         <a class="font-bold uppercase text-purple-800" href="#">webdev</a>
-        <nav class="flex items-center">
+        <nav class="hidden items-center md:flex">
           <ul class="inline-flex items-center">
             <li>
               <a class="header-link" href="#"> Home </a>
@@ -33,6 +33,22 @@
             </li>
           </ul>
         </nav>
+        <button class="inline-block md:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
       </header>
 
       <!-- breadcrumbs -->
@@ -92,9 +108,9 @@
       </div>
 
       <!-- banners -->
-      <section class="flex space-x-2 px-2">
+      <section class="px-2 lg:flex lg:space-x-2">
         <a
-          class="relative mb-4 inline-block h-96 w-2/3 overflow-hidden rounded bg-violet-300"
+          class="relative mb-4 inline-block h-96 w-full overflow-hidden rounded bg-violet-300 lg:w-2/3"
           href="#"
         >
           <div class="absolute bottom-0 left-0 z-20 p-4">
@@ -105,7 +121,7 @@
         </a>
 
         <a
-          class="relative mb-4 inline-block h-96 w-1/3 overflow-hidden rounded bg-indigo-300"
+          class="relative mb-4 inline-block h-96 w-full overflow-hidden rounded bg-indigo-300 lg:w-1/3"
           href="#"
         >
           <div class="absolute bottom-0 left-0 z-20 p-4">
@@ -116,8 +132,8 @@
         </a>
       </section>
 
-      <main class="flex space-x-2 px-2">
-        <div class="w-2/3">
+      <main class="px-2 lg:flex lg:space-x-2">
+        <div class="w-full lg:w-2/3">
           <!-- post cards -->
           <section>
             <a class="mb-10 block" href="#">
@@ -201,9 +217,9 @@
           </div>
         </div>
 
-        <div class="w-1/3">
+        <div class="w-full md:flex md:gap-6 lg:block lg:w-1/3">
           <!-- topics -->
-          <div class="mb-5">
+          <div class="mb-5 w-full md:w-1/2 lg:w-full">
             <h5 class="mb-2 text-lg font-bold uppercase text-gray-700">
               Popular News
             </h5>
@@ -247,36 +263,38 @@
             </ul>
           </div>
 
-          <!-- divider -->
-          <div class="border border-dotted"></div>
+          <div class="w-full md:w-1/2 lg:w-full">
+            <!-- divider -->
+            <div class="border border-dotted md:hidden lg:block"></div>
 
-          <!-- subscribe -->
-          <div class="my-5">
-            <h5 class="mb-2 text-lg font-bold uppercase text-gray-700">
-              Subscribe
-            </h5>
-            <p class="mb-4 text-gray-600">Subscribe to our newsletter.</p>
-            <input
-              type="email"
-              placeholder="Your email"
-              class="w-full rounded-t border bg-gray-100 p-2 text-gray-700 hover:border-gray-600"
-            />
-            <button
-              class="w-full rounded-b bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-800"
-            >
-              Subscribe
-            </button>
+            <!-- subscribe -->
+            <div class="my-5 md:my-0 lg:my-5">
+              <h5 class="mb-2 text-lg font-bold uppercase text-gray-700">
+                Subscribe
+              </h5>
+              <p class="mb-4 text-gray-600">Subscribe to our newsletter.</p>
+              <input
+                type="email"
+                placeholder="Your email"
+                class="w-full rounded-t border bg-gray-100 p-2 text-gray-700 hover:border-gray-600"
+              />
+              <button
+                class="w-full rounded-b bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-800"
+              >
+                Subscribe
+              </button>
+            </div>
+
+            <!-- divider -->
+            <div class="border border-dotted md:hidden lg:block"></div>
           </div>
-
-          <!-- divider -->
-          <div class="border border-dotted"></div>
         </div>
       </main>
 
       <!-- footer -->
       <footer class="mt-10 border-t py-10 px-2">
-        <div class="flex">
-          <div class="mb-5 w-2/5">
+        <div class="md:flex">
+          <div class="mb-5 w-full md:w-2/5">
             <h6 class="mb-3 font-semibold text-gray-700">Company</h6>
             <ul>
               <li>
@@ -287,7 +305,7 @@
               </li>
             </ul>
           </div>
-          <div class="mb-5 w-2/5">
+          <div class="mb-5 w-full md:w-2/5">
             <h6 class="mb-3 font-semibold text-gray-700">Content</h6>
             <ul>
               <li>
@@ -301,7 +319,7 @@
               </li>
             </ul>
           </div>
-          <div class="w-1/5">
+          <div class="w-full md:w-1/5">
             <h6 class="mb-3 font-semibold text-gray-700">Contact Us</h6>
             <ul class="flex gap-2">
               <li>
